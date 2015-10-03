@@ -1,0 +1,12 @@
+<ion-view view-title="Trajets">
+    <ion-content class="has-header padding">
+        <ion-list>
+            <ion-item ng-repeat="trajet in trajets" type="item-text-wrap"
+                      href="#/tab/trajets/{{trajet._id}}">
+                {{trajet.villeDepart}} <i class="icon ion-arrow-right-c"></i> {{trajet.villeArrivee}}
+                <p>Le {{trajet.date*1000 | date:"dd/MM/yyyy 'à' H'h'mm"}} - reste {{trajet.nbPlaces}} place(s)</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

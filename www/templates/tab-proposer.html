@@ -1,0 +1,33 @@
+<ion-view view-title="Proposer">
+  <ion-content class="padding">
+    <div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-edit placeholder-icon"></i>
+			<input id="villeDepart" type="text" placeholder="Départ" ng-model="villeDepart">
+		</label>
+	</div>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-edit placeholder-icon"></i>
+			<input id="villeArrivee" type="text" placeholder="Arrivée" ng-model="villeArrivee">
+		</label>
+	</div>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-edit placeholder-icon"></i>
+			<input id="nbPlaces" type="tel" placeholder="Nombre de places" ng-model="nbPlaces">
+		</label>
+	</div>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-calendar placeholder-icon"></i>
+			<input id="date" type="date" ng-model="date" string-to-timestamp>
+		</label>
+	</div>
+	<button class="button button-full button-positive" ng-click="createTrajet(villeDepart, villeArrivee, date, nbPlaces)">
+		<i class="ion-edit"></i>
+		Proposer
+	</button>
+	{{message}}
+  </ion-content>
+</ion-view>

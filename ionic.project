@@ -1,0 +1,14 @@
+{
+  "name": "blablacar-front",
+  "app_id": "",
+  "proxies": [
+    {
+    	"path": "/trajets",
+    	"proxyUrl": "http://localhost:5000/trajets"
+    },
+    {
+    	"path": "/utilisateurs",
+    	"proxyUrl": "http://localhost:5000/utilisateurs"
+    }
+  ]
+}

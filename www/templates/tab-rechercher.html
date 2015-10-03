@@ -1,0 +1,33 @@
+<ion-view view-title="Rechercher">
+  <ion-content class="padding">
+    <div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input id="villeDepart" type="text" placeholder="Départ" ng-model="villeDepart">
+		</label>
+	</div>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input id="villeArrivee" type="text" placeholder="Arrivée" ng-model="villeArrivee">
+		</label>
+	</div>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-calendar placeholder-icon"></i>
+			<input id="date" type="date" ng-model="date" string-to-timestamp>
+		</label>
+	</div>
+	<button class="button button-full button-positive" ng-click="searchTrajet(villeDepart, villeArrivee, date)">
+		<i class="ion-ios-search-strong"></i>
+		Rechercher
+	</button>
+	<ion-list>
+        <ion-item ng-repeat="trajet in trajets" type="item-text-wrap"
+                      href="#/tab/rechercher/{{trajet._id}}">
+                {{trajet.villeDepart}} <i class="icon ion-arrow-right-c"></i> {{trajet.villeArrivee}}
+                <p>Le {{trajet.date*1000 | date:"dd/MM/yyyy 'à' H'h'mm"}} - reste {{trajet.nbPlaces}} place(s)</p>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

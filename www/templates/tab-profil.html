@@ -1,0 +1,13 @@
+<ion-view view-title="Profil">
+	<ion-nav-buttons side="right">
+		<button class="button icon-left ion-log-out button-stable" ng-click="logout()">Logout</button>
+	</ion-nav-buttons>
+  <ion-content class="padding">
+	Mail: {{username}}
+	<label class="item item-input">
+		<i class="icon ion-edit placeholder-icon"></i>
+		<input id="photo" type="file" placeholder="avatar.png" ng-model="photo">
+	</label>
+  </ion-content>
+</ion-view>
+

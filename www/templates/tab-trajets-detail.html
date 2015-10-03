@@ -1,0 +1,13 @@
+<ion-view view-title="Trajet">
+     <ion-content has-header="true" padding="true">
+
+        <div class="list card">
+            <div class="item">
+                <h2>{{trajet.villeDepart}} <i class="icon ion-arrow-right-c"></i> {{trajet.villeArrivee}}</h2>
+                <p>Le {{trajet.date*1000 | date:"dd/MM/yyyy 'à' H'h'mm"}} - reste {{trajet.nbPlaces}} place(s)</p>
+            </div>
+        </div>
+        <button class="button button-block button-balanced" >Je réserve !</button>
+    </ion-content>
+
+</ion-view>
